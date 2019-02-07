@@ -1,0 +1,35 @@
+{
+  "name": "machu-picchu-availability",
+  "version": "1.0.0",
+  "description": "small API to get all the available spots for Machu Picchu for a given day",
+  "scripts": {
+    "dev": "nodemon src/getAvailability.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marciobarrios/machu-picchu-availability.git"
+  },
+  "keywords": [
+    "api",
+    "machu picchu",
+    "machu picchu tickets",
+    "machu picchu availability"
+  ],
+  "author": "Marcio Barrios",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marciobarrios/machu-picchu-availability/issues"
+  },
+  "homepage": "https://github.com/marciobarrios/machu-picchu-availability#readme",
+  "dependencies": {
+    "chrome-aws-lambda": "1.11.1",
+    "puppeteer-core": "1.11.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.12.1",
+    "eslint-config-unobtrusive": "^1.2.2",
+    "nodemon": "^1.18.9",
+    "prettier": "^1.16.0"
+  }
+}
