@@ -3,7 +3,12 @@ const { parse } = require("url");
 
 module.exports = async function(req, res) {
   const { query } = parse(req.url, true);
-  const { route = 2, year = 2019, month = 0 } = query;
+  const date = new Date();
+  const {
+    route = 2,
+    year = date.getFullYear(),
+    month = date.getMonth(),
+  } = query;
 
   try {
     const result = await getAvailability({
