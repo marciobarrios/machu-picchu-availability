@@ -1,8 +1,8 @@
-// const puppeteer = require("puppeteer");
 const chrome = require("chrome-aws-lambda");
 const puppeteer = require("puppeteer-core");
 
 const {
+  CURRENT_YEAR,
   DAY_CONTAINER,
   DAY_NAME,
   DAY_VALUE,
@@ -24,9 +24,9 @@ const {
  * @param {number} year - year to search
  * @param {number} month - month to search for (check constants.js)
  */
-const getAvailability = async ({ route = 2, year = 2019, month = 0 } = {}) => {
+const getAvailability = async ({ route, year, month } = {}) => {
   if (!ROUTES[route].option) throw new Error("`route` is not valid");
-  if (year !== 2019 && year !== 2020)
+  if (year !== CURRENT_YEAR && year !== CURRENT_YEAR + 1)
     throw new Error("`year` should be 2019 or 2020");
   if (!MONTHS[month])
     throw new Error(

@@ -1,13 +1,14 @@
 const { getAvailability } = require("./getAvailability");
 const { parse } = require("url");
+const { CURRENT_MONTH, CURRENT_YEAR } = require("./constants");
 
 module.exports = async function(req, res) {
   const { query } = parse(req.url, true);
   const date = new Date();
   const {
-    route = 2,
-    year = date.getFullYear(),
-    month = date.getMonth(),
+    route = 0,
+    year = CURRENT_YEAR,
+    month = CURRENT_MONTH,
   } = query;
 
   try {

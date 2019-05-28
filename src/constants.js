@@ -2,6 +2,10 @@ const URL = "https://www.machupicchu.gob.pe/consulta/disponibilidad";
 const WIDTH = 1024;
 const HEIGHT = 800;
 
+// Date
+const CURRENT_YEAR = new Date().getFullYear();
+const CURRENT_MONTH = new Date().getMonth();
+
 // Selectors
 const DAY_CONTAINER = ".day";
 const ROUTE_FORM = "#slRuta";
@@ -29,14 +33,6 @@ const MONTHS = [
 ];
 
 const ROUTES = [
-  {
-    option: 1,
-    name: "Ruta 1 (4d/3n) Piscacucho KM82 - 4 dias - 3 noches",
-  },
-  {
-    option: 4,
-    name: "Ruta 5 (directo) Chachabamba KM104 - sin pernocte",
-  },
   {
     option: 100,
     name: "Machupicchu - A partir de las 6:00",
@@ -100,6 +96,8 @@ const ROUTES = [
 ];
 
 module.exports = {
+  CURRENT_MONTH,
+  CURRENT_YEAR,
   DAY_CONTAINER,
   DAY_NAME,
   DAY_VALUE,
@@ -113,4 +111,4 @@ module.exports = {
   SUBMIT,
   URL,
   WIDTH,
-}
+};
